@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ColorBox from "./ColorBox";
 import "./ColorCity.css";
+import { generateCity } from "./colorHelpers";
 
 class ColorCity extends Component {
   constructor(props) {
