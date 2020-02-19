@@ -7,7 +7,7 @@ function App() {
   console.log(generateCity(seedColors[0]));
   return (
     <div>
-      <ColorCity city={seedColors[0]} />
+      <ColorCity city={generateCity(seedColors[0])} />
     </div>
   );
 }
