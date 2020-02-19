@@ -3,6 +3,7 @@ import ColorBox from "./ColorBox";
 import "./ColorCity.css";
 import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
+import "./SliderTheme.css";
 
 class ColorCity extends Component {
   constructor(props) {
@@ -26,13 +27,15 @@ class ColorCity extends Component {
 
     return (
       <div className="City">
-        <Slider
-          defaultValue={level}
-          min={100}
-          max={900}
-          step={100}
-          onAfterChange={this.changeLevel}
-        />
+        <div className="slider">
+          <Slider
+            defaultValue={level}
+            min={100}
+            max={900}
+            step={100}
+            onAfterChange={this.changeLevel}
+          />
+        </div>
         {/*Navbar */}
         <div className="City-colors">{colorBoxes}</div>
         {/*footer */}

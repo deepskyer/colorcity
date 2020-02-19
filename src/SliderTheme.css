@@ -1,0 +1,30 @@
+.slider {
+  width: 400px;
+  margin: 0 10px;
+  display: inline-block;
+  background-color: transparent;
+}
+
+.rc-slider-track {
+  background-color: rgb(116, 116, 116);
+  height: 8px;
+}
+
+.rc-slider-rail {
+  height: 8px;
+  background-color: rgb(85, 85, 85);
+}
+
+.rc-slider-handle,
+.rc-slider-handle:active,
+.rc-slider-handle:focus,
+.rc-slider-handle:hover {
+  background-color: blueviolet;
+  outline: none;
+  border: 2px solid blueviolet;
+  box-shadow: none;
+  width: 13px;
+  height: 13px;
+  margin-left: 0px;
+  margin-top: -3px;
+}

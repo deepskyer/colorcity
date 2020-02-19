@@ -5,6 +5,15 @@
 .City-colors {
   height: 90%;
 }
+.slider {
+  width: 400px;
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.rc-slider-track {
+  background-color: red;
+}
 
 .copy-overlay {
   opacity: 0;
