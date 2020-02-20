@@ -1,44 +1,42 @@
 import React, { Component } from "react";
 import ColorBox from "./ColorBox";
 import "./ColorCity.css";
-import Slider from "rc-slider";
-import "rc-slider/assets/index.css";
-import "./SliderTheme.css";
+import Navbar from "./Navbar";
 
 class ColorCity extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      level: 500
+      level: 500,
+      formate: "hex"
     };
     this.changeLevel = this.changeLevel.bind(this);
+    this.changeFormate = this.changeFormate.bind(this);
   }
 
   changeLevel(level) {
     this.setState({ level });
   }
 
+  changeFormate(val) {
+    this.setState({ formate: val });
+  }
+
   render() {
     const { colors } = this.props.city;
-    const { level } = this.state;
+    const { level, formate } = this.state;
     const colorBoxes = colors[level].map(color => (
-      <ColorBox background={color.hex} name={color.name} />
+      <ColorBox background={color[formate]} name={color.name} />
     ));
 
     return (
       <div className="City">
-        <div className="slider">
-          <Slider
-            defaultValue={level}
-            min={100}
-            max={900}
-            step={100}
-            onAfterChange={this.changeLevel}
-          />
-        </div>
-        {/*Navbar */}
+        <Navbar
+          level={level}
+          changeLevel={this.changeLevel}
+          handleChange={this.changeFormate}
+        />
         <div className="City-colors">{colorBoxes}</div>
-        {/*footer */}
       </div>
     );
   }
