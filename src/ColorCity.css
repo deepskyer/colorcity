@@ -1,5 +1,7 @@
 .City {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .City-colors {
@@ -58,4 +60,19 @@
 .copy-msg p {
   font-weight: 100;
   font-size: 2rem;
+}
+
+.city-footer {
+  background-color: black;
+  height: 5vh;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-weight: bold;
+}
+
+.emoji {
+  font-size: 1.5rem;
+  margin: 0 1rem;
 }

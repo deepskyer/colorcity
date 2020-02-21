@@ -23,10 +23,10 @@ class ColorCity extends Component {
   }
 
   render() {
-    const { colors } = this.props.city;
+    const { colors, cityName, emoji } = this.props.city;
     const { level, formate } = this.state;
     const colorBoxes = colors[level].map(color => (
-      <ColorBox background={color[formate]} name={color.name} />
+      <ColorBox background={color[formate]} name={color.name} key={color.id} />
     ));
 
     return (
@@ -37,6 +37,10 @@ class ColorCity extends Component {
           handleChange={this.changeFormate}
         />
         <div className="City-colors">{colorBoxes}</div>
+        <footer className="city-footer">
+          {cityName}
+          <span className="emoji">{emoji}</span>
+        </footer>
       </div>
     );
   }
